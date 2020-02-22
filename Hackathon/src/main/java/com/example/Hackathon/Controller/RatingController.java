@@ -22,7 +22,6 @@ public class RatingController {
 
     @PostMapping
     public void createRating(@Valid @NonNull @RequestBody Long studentId, Long foodId, Integer score) {
-        RatingController rateService;
         ratingService.createRating(studentId, foodId, score);
     }
 
