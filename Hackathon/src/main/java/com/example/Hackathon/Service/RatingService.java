@@ -24,4 +24,20 @@ public class RatingService {
         ratingRepository.saveAndFlush(rating);
         return rating;
     }
+
+    public int deleteRating(Long Id) {
+        Rating r = ratingRepository.getById(Id);
+        ratingRepository.delete(r);
+        return 1;
+    }
+
+    public int updateRating(Long Id, Rating newRating) {
+        Rating r = ratingRepository.getById(Id);
+        ratingRepository.delete(r);
+        ratingRepository.saveAndFlush(newRating);
+        return 1;
+    }
+
+
+
 }
