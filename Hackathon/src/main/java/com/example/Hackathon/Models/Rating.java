@@ -18,7 +18,7 @@ import javax.persistence.Id;
 public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long Id;
+    public Long id;
 
     public Long studentId;
 
