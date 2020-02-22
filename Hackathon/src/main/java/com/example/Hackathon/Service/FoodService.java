@@ -1,6 +1,7 @@
 package com.example.Hackathon.Service;
 
 import com.example.Hackathon.Models.Food;
+import com.example.Hackathon.Models.Rating;
 import com.example.Hackathon.Repository.FoodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,5 +26,18 @@ public class FoodService {
 
     public Food saveOrUpdateFood(Food food) {
         return foodRepository.saveAndFlush(food);
+    }
+
+    public int deleteFood(Long Id) {
+        Food food = foodRepository.getById(Id);
+        foodRepository.delete(food);
+        return 1;
+    }
+
+    public int updateFood(Long Id, Food newFood) {
+        Food food = foodRepository.getById(Id);
+        foodRepository.delete(food);
+        foodRepository.saveAndFlush(newFood);
+        return 1;
     }
 }
