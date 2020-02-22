@@ -29,14 +29,12 @@ public class FoodService {
     }
 
     public int deleteFood(Long Id){
-        Food food = foodRepository.getById(Id);
-        foodRepository.delete(food);
+        foodRepository.deleteById(Id);
         return 1;
     }
 
     public int updateFood(Long Id, Food newFood) {
-        Food food = foodRepository.getById(Id);
-        foodRepository.delete(food);
+        foodRepository.deleteById(Id);
         foodRepository.saveAndFlush(newFood);
         return 1;
     }

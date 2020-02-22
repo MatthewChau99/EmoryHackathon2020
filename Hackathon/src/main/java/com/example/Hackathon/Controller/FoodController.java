@@ -1,6 +1,7 @@
 package com.example.Hackathon.Controller;
 
 import com.example.Hackathon.Models.Food;
+import com.example.Hackathon.Models.Rating;
 import com.example.Hackathon.Models.Student;
 import com.example.Hackathon.Service.FoodService;
 import lombok.NonNull;
@@ -35,5 +36,13 @@ public class FoodController {
     @GetMapping(path = "{id}")
     public Food getById(@PathVariable("id") Long id){
         return foodService.getById(id);
+    }
+
+    @DeleteMapping(path = "{id}")
+    public void deleteFood(@PathVariable("id") Long id) {foodService.deleteFood(id);}
+
+    @PutMapping(path = "{id}")
+    public void updatingFood(@PathVariable("id") Long id,@RequestBody Food foodToUpdate) {
+        foodService.updateFood(id,foodToUpdate);
     }
 }

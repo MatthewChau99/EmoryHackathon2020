@@ -26,14 +26,12 @@ public class RatingService {
     }
 
     public int deleteRating(Long Id) {
-        Rating r = ratingRepository.getById(Id);
-        ratingRepository.delete(r);
+        ratingRepository.deleteById(Id);
         return 1;
     }
 
     public int updateRating(Long Id, Rating newRating) {
-        Rating r = ratingRepository.getById(Id);
-        ratingRepository.delete(r);
+        ratingRepository.deleteById(Id);
         ratingRepository.saveAndFlush(newRating);
         return 1;
     }
