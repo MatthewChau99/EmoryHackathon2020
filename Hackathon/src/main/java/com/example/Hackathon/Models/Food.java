@@ -39,8 +39,75 @@ public class Food {
 
     public Boolean seafood;
 
+    public Long getId() {
+        return id;
+    }
 
-    public String setName(String name) {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public Boolean getOrganic() {
+        return organic;
+    }
+
+    public void setOrganic(Boolean organic) {
+        this.organic = organic;
+    }
+
+    public Boolean getVegetarian() {
+        return vegetarian;
+    }
+
+    public void setVegetarian(Boolean vegetarian) {
+        this.vegetarian = vegetarian;
+    }
+
+    public Boolean getGlutenFree() {
+        return glutenFree;
+    }
+
+    public void setGlutenFree(Boolean glutenFree) {
+        this.glutenFree = glutenFree;
+    }
+
+    public Boolean getHalal() {
+        return halal;
+    }
+
+    public void setHalal(Boolean halal) {
+        this.halal = halal;
+    }
+
+    public Boolean getKosher() {
+        return kosher;
+    }
+
+    public void setKosher(Boolean kosher) {
+        this.kosher = kosher;
+    }
+
+    public Boolean getSeafood() {
+        return seafood;
+    }
+
+    public void setSeafood(Boolean seafood) {
+        this.seafood = seafood;
     }
 }
