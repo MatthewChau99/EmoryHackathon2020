@@ -25,4 +25,5 @@ public class Rating {
     public Long foodId;
 
     public Integer rating;
+
 }

@@ -22,4 +22,15 @@ public class FoodController {
     public Iterable<Food> findAll() {
         return foodService.findAll();
     }
+
+    @PostMapping
+    public void createFood(@Valid @NonNull @RequestBody String name, String origin, Boolean org) {
+        foodService.createFood(name, origin, org);
+    }
+
+    @GetMapping(path = "{id}")
+    public Person getById(@PathVariable("id") Long id){
+        return foodService.getById(id)
+                .orElse(null);
+    }
 }

@@ -11,4 +11,20 @@ public class RatingController {
 
     @Autowired
     private RatingService ratingService;
+
+    @GetMapping("/all")
+    public Iterable<Rating> findAll() {
+        return ratingService.findAll();
+    }
+
+    @PostMapping
+    public void createRating(@Valid @NonNull @RequestBody Long studentId, Long foodId, Integer score) {
+        rateService.createRating(studentId, foodId, score);
+    }
+
+    @GetMapping(path = "{id}")
+    public Person getById(@PathVariable("id") Long id){
+        return foodService.getById(id)
+                .orElse(null);
+    }
 }
