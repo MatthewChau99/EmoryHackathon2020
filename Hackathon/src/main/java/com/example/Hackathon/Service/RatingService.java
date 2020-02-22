@@ -1,6 +1,5 @@
 package com.example.Hackathon.Service;
 
-import com.example.Hackathon.Models.Food;
 import com.example.Hackathon.Models.Rating;
 import com.example.Hackathon.Repository.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,6 @@ public class RatingService {
 
     public Rating createRating(Long studentId, Long foodId, Integer score) {
         Rating rating = new Rating().setStudentId(studentId).setFoodId(foodId).setRating(score);
-        ratingRepository.saveAndFlush(rating);
         return rating;
     }
 

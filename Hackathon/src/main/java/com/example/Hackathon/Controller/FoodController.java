@@ -1,17 +1,12 @@
 package com.example.Hackathon.Controller;
 
 import com.example.Hackathon.Models.Food;
-import com.example.Hackathon.Models.Rating;
-import com.example.Hackathon.Models.Student;
 import com.example.Hackathon.Service.FoodService;
-import lombok.NonNull;
-import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.GeneratedValue;
 import javax.validation.Valid;
 
 @RestController

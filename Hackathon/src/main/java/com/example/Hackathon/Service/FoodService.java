@@ -1,7 +1,6 @@
 package com.example.Hackathon.Service;
 
 import com.example.Hackathon.Models.Food;
-import com.example.Hackathon.Models.Rating;
 import com.example.Hackathon.Repository.FoodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
