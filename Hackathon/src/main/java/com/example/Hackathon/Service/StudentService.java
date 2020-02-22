@@ -37,7 +37,7 @@ public class StudentService {
         return 1;
     }
 
-    public int addFood(Long Id, String food){
+    public int addFood(Long Id, String food) {
         Student student = studentRepository.getById((Id));
         String foodList = student.getFoodlist() + (" " + food);
         student.setFoodList(foodList);

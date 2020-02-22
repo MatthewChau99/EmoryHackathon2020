@@ -85,11 +85,11 @@ public class Student {
         this.origin = origin;
     }
 
-    public String getFoodlist(){
+    public String getFoodlist() {
         return foodList;
     }
 
-    public void setFoodList(String foodList){
+    public void setFoodList(String foodList) {
         this.foodList = foodList;
     }
 
