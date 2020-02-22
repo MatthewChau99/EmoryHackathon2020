@@ -28,7 +28,7 @@ public class FoodService {
         return foodRepository.saveAndFlush(food);
     }
 
-    public int deleteFood(Long Id) {
+    public int deleteFood(Long Id){
         Food food = foodRepository.getById(Id);
         foodRepository.delete(food);
         return 1;
