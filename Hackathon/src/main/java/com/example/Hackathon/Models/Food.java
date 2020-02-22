@@ -28,15 +28,15 @@ public class Food {
 
     public Boolean organic;
 
-    public Boolean vegetarian;
-
-    public Boolean glutenFree;
-
-    public Boolean halal;
-
-    public Boolean kosher;
-
-    public Boolean seafood;
+//    public Boolean vegetarian;
+//
+//    public Boolean glutenFree;
+//
+//    public Boolean halal;
+//
+//    public Boolean kosher;
+//
+//    public Boolean seafood;
 
 
 }

@@ -18,9 +18,12 @@ public class FoodService {
         return foodRepository.getById(Id);
     }
 
-    public Food createFood(String name, String origin, Boolean org) {
-        Food food = new Food().setName(name).setOrigin(origin);
+    public Food createFood(Food food) {
         foodRepository.saveAndFlush(food);
         return food;
+    }
+
+    public Food saveOrUpdateFood(Food food) {
+        return foodRepository.saveAndFlush(food);
     }
 }

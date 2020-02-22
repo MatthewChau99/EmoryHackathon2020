@@ -6,6 +6,8 @@ import com.example.Hackathon.Service.FoodService;
 import lombok.NonNull;
 import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.GeneratedValue;
@@ -23,9 +25,10 @@ public class FoodController {
         return foodService.findAll();
     }
 
-    @PostMapping
-    public void createFood(@Valid @NonNull @RequestBody String name, String origin, Boolean org) {
-        foodService.createFood(name, origin, org);
+    @PostMapping("/new")
+    public ResponseEntity<?> createFood(@Valid @RequestBody Food food) {
+        Food newFood = foodService.saveOrUpdateFood(food);
+        return new ResponseEntity<Food>(newFood, HttpStatus.CREATED);
     }
 
     @GetMapping(path = "{id}")
