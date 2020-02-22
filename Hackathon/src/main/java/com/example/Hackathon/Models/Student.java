@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -32,6 +34,8 @@ public class Student {
     public Integer year;
 
     public String origin;
+
+    public String foodList;
 
     public Long getId() {
         return id;
@@ -81,5 +85,12 @@ public class Student {
         this.origin = origin;
     }
 
+    public String getFoodlist(){
+        return foodList;
+    }
+
+    public void setFoodList(String foodList){
+        this.foodList = foodList;
+    }
 
 }
