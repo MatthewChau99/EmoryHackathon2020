@@ -1,9 +1,12 @@
 package com.example.Hackathon.Controller;
 
+import com.example.Hackathon.Models.Rating;
 import com.example.Hackathon.Service.RatingService;
+import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/ratings")
@@ -19,12 +22,12 @@ public class RatingController {
 
     @PostMapping
     public void createRating(@Valid @NonNull @RequestBody Long studentId, Long foodId, Integer score) {
-        rateService.createRating(studentId, foodId, score);
+        RatingController rateService;
+        ratingService.createRating(studentId, foodId, score);
     }
 
     @GetMapping(path = "{id}")
-    public Person getById(@PathVariable("id") Long id){
-        return foodService.getById(id)
-                .orElse(null);
+    public Rating getById(@PathVariable("id") Long id){
+        return ratingService.getById(id);
     }
 }
