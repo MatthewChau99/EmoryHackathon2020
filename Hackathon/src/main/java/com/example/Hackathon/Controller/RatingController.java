@@ -29,4 +29,12 @@ public class RatingController {
     public Rating getById(@PathVariable("id") Long id){
         return ratingService.getById(id);
     }
+
+    @DeleteMapping(path = "{id}")
+    public void deleteRating(@PathVariable("id") Long id) {ratingService.deleteRating(id);}
+
+    @PutMapping(path = "{id}")
+    public void updatingRating(@PathVariable("id") Long id,@RequestBody Rating ratingToUpdate) {
+        ratingService.updateRating(id,ratingToUpdate);
+    }
 }
