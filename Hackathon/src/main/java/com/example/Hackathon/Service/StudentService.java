@@ -1,5 +1,6 @@
 package com.example.Hackathon.Service;
 
+import com.example.Hackathon.Models.Rating;
 import com.example.Hackathon.Models.Student;
 import com.example.Hackathon.Repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,5 +24,16 @@ public class StudentService {
         Student student = new Student().setName(name).setEmail(email).setOrigin(origin);
         studentRepository.saveAndFlush(student);
         return student;
+    }
+
+    public int deleteStudent(Long Id) {
+        studentRepository.deleteById(Id);
+        return 1;
+    }
+
+    public int updateStudent(Long Id, Student newStudent) {
+        studentRepository.deleteById(Id);
+        studentRepository.saveAndFlush(newStudent);
+        return 1;
     }
 }
