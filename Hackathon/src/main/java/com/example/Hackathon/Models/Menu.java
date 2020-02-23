@@ -16,7 +16,6 @@ import javax.validation.constraints.NotBlank;
 @Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Menu {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

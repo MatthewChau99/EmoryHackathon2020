@@ -3,17 +3,20 @@ package com.example.Hackathon.Service;
 import com.example.Hackathon.Models.Menu;
 import com.example.Hackathon.Repository.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MenuService {
+
     @Autowired
     private MenuRepository menuRepository;
 
     public Iterable<Menu> findAll() {
-        return MenuRepository.findAll();
+        return menuRepository.findAll();
     }
 
     public Menu getById(Long Id) {
-        return MenuRepository.getById(Id);
+        return menuRepository.getById(Id);
     }
 
     public Menu createMenu(Menu menu) {
@@ -22,7 +25,7 @@ public class MenuService {
     }
 
     public Menu saveOrUpdateMenu(Menu menu) {
-        return MenuRepository.saveAndFlush(menu);
+        return menuRepository.saveAndFlush(menu);
     }
 
     public int deleteMenu(Long Id){

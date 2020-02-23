@@ -13,7 +13,6 @@ import javax.validation.Valid;
 @RequestMapping("/menu")
 public class MenuController {
 
-
     @Autowired
     private MenuService menuService;
 
