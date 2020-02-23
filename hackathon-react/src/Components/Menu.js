@@ -27,9 +27,9 @@ class Menu extends Component {
     }
     render() {
         return (
-            <div className="container">
-                <div className='float-md-none'>
-                    <h3 align='center'>Rate Today's Menu</h3>
+            <div className="container2">
+                <div className = "center1">
+                    <p>Rate Today's Menu</p>
                 </div>
             </div>
         );
