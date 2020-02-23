@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import logo from '../Assets/img/logo1.png';
+import {Link} from "react-router-dom";
 
 class Navbar extends Component {
     render() {
+        const logoLink = <li><Link to='/'><img src={logo} alt=""/></Link></li>;
         return (
             <header>
                 <div className="header-area ">
@@ -11,7 +13,7 @@ class Navbar extends Component {
                             <div className="row align-items-center no-gutters">
                                 <div className="col-xl-2 col-lg-2">
                                     <div className="logo">
-                                        <img src={logo} alt=""/>
+                                        {logoLink}
                                     </div>
                                 </div>
                                 <div className="col-xl-6 col-lg-6">

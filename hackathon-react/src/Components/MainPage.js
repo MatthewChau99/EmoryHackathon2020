@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class MainPage extends Component {
     render() {
@@ -15,7 +16,13 @@ class MainPage extends Component {
                                             Dinning Experience</h3>
                                         <p>Sign up and put down your favorite dishes.
                                             Receive immediate notification when DCT offers on that day </p>
-                                        <a href="#" className="boxed-btn3">View Project</a>
+                                        <a className="boxed-btn3">
+                                            <Link to='Menu'>
+                                                <p>
+                                                    View Today's Menu
+                                                </p>
+                                            </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

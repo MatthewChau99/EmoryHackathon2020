@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
 import './Assets/css/bootstrap.min.css';
 import './Assets/css/animate.css';
 import './Assets/css/flaticon.css';

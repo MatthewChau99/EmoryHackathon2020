@@ -1,18 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-// import './Assets/css/style.css';
+import MainPage from './Containers/MainPageContainer';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Navbar from "./Components/Navbar";
-import MainPage from "./Components/MainPage";
 import Footer from "./Components/Footer";
+import MenuContainer from "./Containers/MenuContainer";
+import {Provider} from "react-redux";
+import store from "./store";
 
 function App() {
   return (
-      <div className="App">
-          <Navbar/>
-          <MainPage/>
-          <Footer/>
-      </div>
+      <Provider store={store}>
+          <Router>
+              <Navbar/>
+              <Route exact={true} path='/' component={MainPage}/>
+              <Route exact={true} path='/Menu' component={MenuContainer}/>
+              <Footer/>
+          </Router>
+      </Provider>
 
   );
 }
