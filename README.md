@@ -4,7 +4,7 @@
 This project is intended to give a communication platform to Emory food providers to make the dining experience better
 for Emory Students, and is built during Emory Hackathon 2020 within 10 hours.
 
-![TrackDuc Main Page](Docs/Main Page.png)
+![TrackDuc Main Page](Docs/Main%20Page.png)
 
 ## Implementation
 
