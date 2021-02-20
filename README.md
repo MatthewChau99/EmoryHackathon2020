@@ -28,5 +28,5 @@ The front end is implemented by React.
 * Matthew Chau - Full Stack Developer, Emory 2021 Math & CS and Music Major
 * Mark Yang - (Frontend?)
 * Julian Zhao - Backend, Emory 2022 CS + Applied Math & Stat Major
-* Oliver Wang - (Backend?)
+* Oliver Wang - Backend，Emory 2022 CS + Applied Math & Stat Major
 
